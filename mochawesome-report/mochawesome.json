@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-25T08:52:35.079Z",
+    "end": "2023-10-25T08:52:44.780Z",
+    "duration": 9701,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "757627a6-d989-4579-a896-fa3e77e01b46",
+      "title": "",
+      "fullFile": "cypress\\e2e\\devfinance.cy.js",
+      "file": "cypress\\e2e\\devfinance.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f6c6d8ba-2190-4ee5-955d-c625a6dcf416",
+          "title": "Transações",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastrar uma entrada",
+              "fullTitle": "Transações Cadastrar uma entrada",
+              "timedOut": null,
+              "duration": 2152,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "criarTransacao(\"Freela\", 250);\ncy.get(\"tbody tr td.description\").should(\"have.text\", \"Freela\");",
+              "err": {},
+              "uuid": "2768a9b8-ec5a-49c5-abf2-650a078aee3c",
+              "parentUUID": "f6c6d8ba-2190-4ee5-955d-c625a6dcf416",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastrar uma saída",
+              "fullTitle": "Transações Cadastrar uma saída",
+              "timedOut": null,
+              "duration": 1469,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "criarTransacao(\"Cinema\", -45);\ncy.get(\"tbody tr td.description\").should(\"have.text\", \"Cinema\");",
+              "err": {},
+              "uuid": "600df201-2a73-4262-b1ad-07959e1bfe89",
+              "parentUUID": "f6c6d8ba-2190-4ee5-955d-c625a6dcf416",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Excluir transação",
+              "fullTitle": "Transações Excluir transação",
+              "timedOut": null,
+              "duration": 3108,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "criarTransacao(\"Freela\", 250);\ncriarTransacao(\"Mesada\", 50);\ncriarTransacao(\"Cinema\", -30);\n//cy.contains(\".description\", \"Freela\")\n//.parent()\n//.find(\"img\")\n//.click()\ncy.get('[data-index=\"0\"]').find(\"img\").click();\ncy.get('tbody tr').should(\"have.length\", 2);",
+              "err": {},
+              "uuid": "f13e5c3d-93d0-43fb-8440-2db6cc3e38ed",
+              "parentUUID": "f6c6d8ba-2190-4ee5-955d-c625a6dcf416",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2768a9b8-ec5a-49c5-abf2-650a078aee3c",
+            "600df201-2a73-4262-b1ad-07959e1bfe89",
+            "f13e5c3d-93d0-43fb-8440-2db6cc3e38ed"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6729,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
